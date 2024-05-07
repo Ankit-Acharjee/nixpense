@@ -1,0 +1,29 @@
+.customUserButton {
+  height: 50px;
+  width: 50px;
+}
+
+
+/* Assuming your navbar has a class of 'navbar' */
+.navbar {
+  position: relative; /* Set the navbar's position to relative */
+  z-index: 1; /* Ensure the navbar has a lower z-index than the dropdown */
+}
+
+.menuItems {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 70px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  position: absolute; 
+  top: 100%; 
+  left: 0; 
+  z-index: 2; 
+}
+
+.menuItems.active {
+  max-height: 70px; /* Adjust as needed for your content */
+}
+
