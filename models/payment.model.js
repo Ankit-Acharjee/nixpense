@@ -9,19 +9,29 @@ const paymentSchema = new mongoose.Schema({
   upiID: [
     {
       type: String,
+      required: false,
+      unique: [true, "UPI ID already exists"],
+      trim: true,
+      lowercase: [true, "UPI ID must be in lowercase"],
     },
   ],
   upiNo: [
     {
-      type: Number,
+      type: String,
+      required: false,
+      unique: [true, "UPI number already exists"],
     },
   ],
   bankDetails: {
     bankAccountNumber: {
       type: Number,
+      required: false,
+      unique: [true, "Bank account number already exists"],
     },
     bankIFSCCode: {
       type: String,
+      required: false,
+      unique: [true, "IFSC code already exists"],
     },
   },
 });
