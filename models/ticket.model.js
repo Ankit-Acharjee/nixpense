@@ -1,12 +1,12 @@
 import mongoose from "mongoose";
 
 const ticketSchema = new mongoose.Schema({
-  borrowerDetails: {
+  
     name: {
       type: String,
       required: [true, "Name is required"],
     },
-    emailID: {
+    email: {
       type: String,
       required: [true, "Email is required"],
       match: [
@@ -14,7 +14,7 @@ const ticketSchema = new mongoose.Schema({
         "Please provide a valid email",
       ],
     },
-    phoneNo: {
+    phone: {
       type: String,
       required: [true, "Phone number is required"],
       match: [
@@ -22,13 +22,16 @@ const ticketSchema = new mongoose.Schema({
         "Please provide a valid phone number",
       ],
     },
-  },
-  lenderDetails: {
+  lenderId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
     required: true,
   },
   borrowedDate: {
+    type: Date,
+    required: true,
+  },
+  dueDate: {
     type: Date,
     required: true,
   },
@@ -40,7 +43,7 @@ const ticketSchema = new mongoose.Schema({
   paymentDetails: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Payment",
-    required: true,
+    required: false,
   },
   isPaid: {
     type: Boolean,
@@ -50,7 +53,7 @@ const ticketSchema = new mongoose.Schema({
   reminder: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Reminder",
-    required: true,
+    required: false,
   },
 });
 
