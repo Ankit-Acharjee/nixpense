@@ -1,11 +1,17 @@
-import React from 'react'
+import EmailForm from "@/components/emailForm/EmailForm";
+import { getUserByClerkId } from "@/services/user.service";
+import { currentUser } from "@clerk/nextjs/server";
 
-const page = () => {
+const page = async () => {
+  const user = await currentUser();
+  const data = await getUserByClerkId(user?.id);
+  const userName = data?.data?.name;
+  let currentUserData = data?.data ? data?.data : null;
   return (
-    <form action="">
-      
-    </form>
-  )
-}
+    <>
+      <EmailForm lenderId={currentUserData?._id} lenderName={userName}/>
+    </>
+  );
+};
 
-export default page
+export default page;

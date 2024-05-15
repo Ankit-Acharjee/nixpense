@@ -8,7 +8,10 @@ export async function POST(req) {
     await connectMongoDB();
     const userData = await User.create({ clerkUserID, name, email, phoneNo });
     if (!userData) {
-      return NextResponse.json({message:"User Creation Failed"},{status:400});
+      return NextResponse.json(
+        { message: "User Creation Failed" },
+        { status: 400 }
+      );
     }
     return NextResponse.json(
       { data: userData },
