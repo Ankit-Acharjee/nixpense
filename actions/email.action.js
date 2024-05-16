@@ -25,12 +25,6 @@ export const sendEmail = async (
         pass: process.env.MAIL_PASSWORD,
       },
     });
-    console.log(borrowerName);
-    console.log(borrowerEmail);
-    console.log(lenderName);
-    console.log(loanAmount);
-    console.log(borrowedDate);
-    console.log(dueDate);
     const emailHtml = render(
       <EmailTemplate
         borrowerName={borrowerName}

@@ -1,7 +1,9 @@
+import { base_url } from "@/constants";
+
 export async function getUserByClerkId(clerkId) {
   try {
     const res = await fetch(
-      `${process.env.BASE_URL}/api/user/clerk/${clerkId}`,
+      `${base_url}/api/user/clerk/${clerkId}`,
       {
         cache: "no-store",
       }

@@ -25,10 +25,5 @@ export const sidebarLinks =[
         imgUrl: '/icons/profile.svg',
     },
 ]
-// export const avatarImages =[
-//     '/images/avatar-1.jpeg',
-//     '/images/avatar-2.jpeg',
-//     '/images/avatar-3.png',
-//     '/images/avatar-4.png',
-//     '/images/avatar-5.png',
-// ]
+
+export const base_url=process.env.NEXT_PUBLIC_API_URL
