@@ -12,6 +12,7 @@ const EmailForm = ({ lenderId, lenderName }) => {
   const [loanAmount, setLoanAmount] = useState(1);
   const [borrowedDate, setBorrowedDate] = useState(new Date());
   const [dueDate, setDueDate] = useState(new Date());
+  //nahi ho rha ab humse
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
