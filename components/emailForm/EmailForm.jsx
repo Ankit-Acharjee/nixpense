@@ -10,8 +10,8 @@ const EmailForm = ({ lenderId, lenderName }) => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [loanAmount, setLoanAmount] = useState(1);
-  const [borrowedDate, setBorrowedDate] = useState(Date);
-  const [dueDate, setDueDate] = useState(Date);
+  const [borrowedDate, setBorrowedDate] = useState(new Date());
+  const [dueDate, setDueDate] = useState(new Date());
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
