@@ -7,7 +7,7 @@ import { VscChromeClose } from "react-icons/vsc";
 import styles from "@/components/navbar/Navbar.module.css";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Avatar, AvatarImage } from "../ui/avatar";
+import { Avatar, AvatarImage } from "./ui/avatar";
 import Link from "next/link";
 
 const Navbar = () => {

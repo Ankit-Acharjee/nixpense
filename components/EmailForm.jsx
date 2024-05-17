@@ -1,7 +1,7 @@
 "use client";
-import { Input } from "../ui/input";
-import { Label } from "../ui/label";
-import { Button } from "../ui/button";
+import { Input } from "./ui/input";
+import { Label } from "./ui/label";
+import { Button } from "./ui/button";
 import { useState } from "react";
 import { sendEmail } from "@/actions/email.action";
 
@@ -12,7 +12,7 @@ const EmailForm = ({ lenderId, lenderName }) => {
   const [loanAmount, setLoanAmount] = useState(1);
   const [borrowedDate, setBorrowedDate] = useState(new Date());
   const [dueDate, setDueDate] = useState(new Date());
-  //nahi ho rha ab humse
+ 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {

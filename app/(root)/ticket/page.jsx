@@ -7,7 +7,6 @@ const page = async () => {
   const data = await getUserByClerkId(user?.id);
   const userName = data?.data?.name;
   let currentUserData = data?.data ? data?.data : null;
-  //code kaam nahi kar rha hai baabaa
   return (
     <>
       <EmailForm lenderId={currentUserData?._id} lenderName={userName}/>
