@@ -4,7 +4,7 @@ import { SignOutButton, SignedIn, UserButton, useUser } from "@clerk/nextjs";
 import Image from "next/image";
 import { SlMenu } from "react-icons/sl";
 import { VscChromeClose } from "react-icons/vsc";
-import styles from "@/components/navbar/Navbar.module.css";
+import styles from "@/components/Navbar.module.css";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Avatar, AvatarImage } from "./ui/avatar";
