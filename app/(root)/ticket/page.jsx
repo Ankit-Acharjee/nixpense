@@ -1,4 +1,4 @@
-import EmailForm from "@/components/EmailForm/EmailForm";
+import EmailForm from "@/components/EmailForm";
 import { getUserByClerkId } from "@/services/user.service";
 import { currentUser } from "@clerk/nextjs/server";
 
